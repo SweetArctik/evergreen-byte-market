@@ -78,7 +78,7 @@ const CheckoutPage = () => {
           zipCode: data.zipCode
         },
         paymentMethod: "Credit Card",
-        status: "Processing",
+        status: "Processing" as const, // Fix: Use a specific literal type instead of string
         date: new Date().toISOString(),
         userId: user?.id
       };
